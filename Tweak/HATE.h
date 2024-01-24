@@ -19,7 +19,7 @@ BOOL pfEnabled;
 @interface UIKeyboardDockView : UIView
 @end
 
-@interface TUIPredictionViewCell : UIView
+@interface TUIPredictionViewStackView : UIView
 @end
 
 @interface TUIEmojiSearchInputView : UIView

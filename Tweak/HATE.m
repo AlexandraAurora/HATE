@@ -35,16 +35,16 @@ static UIKeyboardDockView* override_UIKeyboardDockView_initWithFrame(UIKeyboardD
     return orig;
 }
 
-#pragma mark - TUIPredictionViewCell class hooks
+#pragma mark - TUIPredictionViewStackView class hooks
 
 /**
- * Sets the background color of the prediction view cell to black.
+ * Sets the background color of the prediction view to black.
  *
  * @param frame
  */
-static TUIPredictionViewCell* (* orig_TUIPredictionViewCell_initWithFrame)(TUIPredictionViewCell* self, SEL _cmd, CGRect frame);
-static TUIPredictionViewCell* override_TUIPredictionViewCell_initWithFrame(TUIPredictionViewCell* self, SEL _cmd, CGRect frame) {
-	TUIPredictionViewCell* orig = orig_TUIPredictionViewCell_initWithFrame(self, _cmd, frame);
+static TUIPredictionViewStackView* (* orig_TUIPredictionViewStackView_initWithFrame)(TUIPredictionViewStackView* self, SEL _cmd, CGRect frame);
+static TUIPredictionViewStackView* override_TUIPredictionViewStackView_initWithFrame(TUIPredictionViewStackView* self, SEL _cmd, CGRect frame) {
+	TUIPredictionViewStackView* orig = orig_TUIPredictionViewStackView_initWithFrame(self, _cmd, frame);
     [self setBackgroundColor:[UIColor blackColor]];
     return orig;
 }
@@ -139,7 +139,7 @@ __attribute((constructor)) static void initialize() {
 
 	MSHookMessageEx(NSClassFromString(@"UIKeyboard"), @selector(initWithFrame:), (IMP)&override_UIKeyboard_initWithFrame, (IMP *)&orig_UIKeyboard_initWithFrame);
     MSHookMessageEx(NSClassFromString(@"UIKeyboardDockView"), @selector(initWithFrame:), (IMP)&override_UIKeyboardDockView_initWithFrame, (IMP *)&orig_UIKeyboardDockView_initWithFrame);
-    MSHookMessageEx(NSClassFromString(@"TUIPredictionViewCell"), @selector(initWithFrame:), (IMP)&override_TUIPredictionViewCell_initWithFrame, (IMP *)&orig_TUIPredictionViewCell_initWithFrame);
+    MSHookMessageEx(NSClassFromString(@"TUIPredictionViewStackView"), @selector(initWithFrame:), (IMP)&override_TUIPredictionViewStackView_initWithFrame, (IMP *)&orig_TUIPredictionViewStackView_initWithFrame);
     MSHookMessageEx(NSClassFromString(@"TUIEmojiSearchInputView"), @selector(didMoveToWindow), (IMP)&override_TUIEmojiSearchInputView_didMoveToWindow, (IMP *)&orig_TUIEmojiSearchInputView_didMoveToWindow);
     MSHookMessageEx(NSClassFromString(@"UIKBRenderConfig"), @selector(setLightKeyboard:), (IMP)&override_UIKBRenderConfig_setLightKeyboard, (IMP *)&orig_UIKBRenderConfig_setLightKeyboard);
 
