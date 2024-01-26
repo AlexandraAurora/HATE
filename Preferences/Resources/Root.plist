@@ -101,6 +101,18 @@
 			<key>height</key>
 			<integer>54</integer>
 		</dict>
+		<dict>
+			<key>cellClass</key>
+			<string>LinkCell</string>
+			<key>label</key>
+			<string>Donate</string>
+			<key>subtitle</key>
+			<string>Let me know that you like what I do.</string>
+			<key>url</key>
+			<string>https://ko-fi.com/vyolit</string>
+			<key>height</key>
+			<integer>54</integer>
+		</dict>
 	</array>
 	<key>title</key>
 	<string>HATE</string>
