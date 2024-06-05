@@ -1,18 +1,18 @@
 ---
-name: Bug report
-about: Report a bug to help improve HATE
+name: Bug Report
+about: Report a bug in HATE.
 title: ''
 labels: bug
-assignees: vyolit
+assignees: AlexandraAurora
 
 ---
 
 **Describe the bug:**
 
-**Steps to reproduce the behavior:**
+**Steps to reproduce:**
 
-**Crash log:**
-Upload your log file to pastebin and paste the link here.
+**Crash log (if applicable):**
+Upload your log file to Pastebin and paste the link here.
 
 **System information:**
 - iOS version:

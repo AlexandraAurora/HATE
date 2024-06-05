@@ -1,9 +1,9 @@
 ---
-name: Feature request
-about: Suggest a feature that can help make HATE even better
+name: Feature Request
+about: Suggest a feature for HATE.
 title: ''
 labels: enhancement
-assignees: vyolit
+assignees: AlexandraAurora
 
 ---
 
