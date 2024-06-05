@@ -6,6 +6,9 @@
 //
 
 #import "HATE.h"
+#import <substrate.h>
+#import "../Preferences/PreferenceKeys.h"
+#import "../Preferences/NotificationKeys.h"
 
 #pragma mark - UIKeyboard class hooks
 
